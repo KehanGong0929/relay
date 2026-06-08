@@ -4,9 +4,9 @@
 > OS temp dir as `handoff-acme-api-2026-06-07-1840.md`, not committed to your repo.
 > Names and paths below are fictional.
 
-**Project path:** /Users/dev/work/acme-api
-**Branch:** feat/jwt-auth
-**Date:** 2026-06-07
+- Project path: `/Users/dev/work/acme-api`
+- Branch: `feat/jwt-auth`
+- Created: `2026-06-07 18:40`
 
 ## What this session did
 

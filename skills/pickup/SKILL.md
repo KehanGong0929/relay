@@ -17,6 +17,6 @@ If no `handoff*.md` files are found in the temp directory, tell the user the tem
 
 After filtering: if exactly one matches, load it; if several match, list them and ask the user to choose.
 
-Once a document is chosen, read it and continue the work it describes - treat it as instructions to act on, not merely a summary to repeat. Consider invoking any skills listed in its "Suggested skills" section, using your judgement about which are actually relevant.
+Once a document is chosen, read it and continue the work it describes - treat it as instructions to act on, not merely a summary to repeat. Review the "Suggested skills" section, but invoke only skills that are installed, relevant, and safe for the current task — never invoke an unfamiliar skill automatically. If a suggested skill would run commands, modify files, access secrets, or send data externally, ask the user first.
 
 If the loaded document appears to still contain secrets (API keys, passwords, PII), warn the user and ask whether to proceed before acting on the document's instructions.

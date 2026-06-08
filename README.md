@@ -1,4 +1,4 @@
-# relay — session handoff for AI agents
+# relay — context continuity for AI agents
 
 Keep your working context alive across `/clear` and session boundaries. Pick up exactly where you left off — in the same agent or a different one.
 
@@ -12,7 +12,7 @@ npx skills add github.com/KehanGong0929/relay -y -g
 
 `-y` = non-interactive, `-g` = global (available in every project). Drop `-g` to install for the current project only.
 
-This one command is enough for every agent — the `skills` CLI detects the compatible agents on your machine (Claude Code, Cursor, Copilot, Codex, Gemini, and more) and installs to all of them. There's no separate per-agent setup.
+The `skills` CLI installs to the compatible agents it finds on your machine — Claude Code, Cursor, Copilot, Codex, Gemini, and more — so a single command usually covers every agent you use, with no separate per-agent setup.
 
 ## Commands
 
