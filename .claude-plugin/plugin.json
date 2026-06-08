@@ -1,0 +1,13 @@
+{
+  "name": "relay",
+  "version": "1.0.0",
+  "description": "Session handoff, resume & pickup for AI coding agents",
+  "author": {
+    "name": "Kehan Gong",
+    "url": "https://github.com/KehanGong0929"
+  },
+  "homepage": "https://github.com/KehanGong0929/relay",
+  "repository": "https://github.com/KehanGong0929/relay",
+  "license": "MIT",
+  "keywords": ["handoff", "session", "resume", "pickup", "context", "agents"]
+}

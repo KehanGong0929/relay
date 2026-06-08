@@ -1,0 +1,16 @@
+{
+  "name": "relay",
+  "metadata": {
+    "description": "Session handoff, resume & pickup for AI coding agents",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "relay",
+      "source": "./",
+      "description": "Keep your working context alive across /clear and session boundaries. /handoff at the end, /resume or /pickup at the start.",
+      "category": "productivity",
+      "tags": ["handoff", "session", "resume", "context", "agents"]
+    }
+  ]
+}
