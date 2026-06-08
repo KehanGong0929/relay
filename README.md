@@ -12,6 +12,8 @@ npx skills add github.com/KehanGong0929/relay -y -g
 
 `-y` = non-interactive, `-g` = global (available in every project). Drop `-g` to install for the current project only.
 
+This one command is enough for every agent — the `skills` CLI detects the compatible coding agents on your machine (Claude Code, Cursor, Copilot, Codex, Gemini, and more) and installs to all of them. There's no separate per-agent setup.
+
 ## Commands
 
 | Command | When | What it does |
@@ -47,6 +49,16 @@ Claude Code  ──/handoff──▶  handoff.md  ──/resume──▶   Claud
                                          ──/resume──▶   Copilot CLI
                                          ──/pickup──▶   any other agent
 ```
+
+### Triggering the commands in other agents
+
+The `/handoff` style used above is slash-command syntax. relay follows the open [Agent Skills](https://agentskills.io) standard, so most compatible agents — Codex, Copilot, Cursor, Gemini — also accept `/handoff`, `/resume`, and `/pickup` directly.
+
+If an agent doesn't support slash commands, just ask in plain language — "hand off this session", "resume the latest handoff", "pick up the handoff from yesterday" — and it will match the skill by its description in the frontmatter.
+
+## What a handoff looks like
+
+See [`examples/handoff-example.md`](examples/handoff-example.md) for a full sample of what `/handoff` actually generates — the structure, the "Next steps", and the "Suggested skills" section that `/resume` and `/pickup` read back.
 
 ## How resume and pickup find your project
 

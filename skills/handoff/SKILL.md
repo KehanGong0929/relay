@@ -10,7 +10,7 @@ Make the document's FIRST line a title in this exact shape: `# <name of the curr
 
 Name the file `handoff-<project-folder-name>-<YYYY-MM-DD-HHmm>.md` in the temp directory.
 
-Include a "Suggested skills" section in the document, which suggests skills that the next agent should invoke.
+Include a "Suggested skills" section in the document, listing skills the next agent may want to invoke (it stays the next agent's choice, not an instruction).
 
 Do not duplicate content already captured in other artifacts (PRDs, plans, ADRs, issues, commits, diffs). Reference them by path or URL instead.
 
