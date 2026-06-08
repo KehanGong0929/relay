@@ -2,6 +2,10 @@
 
 Keep your working context alive across `/clear` and session boundaries. Pick up exactly where you left off — in the same agent or a different one.
 
+<p align="center">
+  <img src="assets/diagram.png" alt="agent-context-relay flow: /handoff writes a plain-Markdown handoff that /resume and /pickup read back, across Claude Code, Codex, Cursor, Copilot, and Gemini" width="820">
+</p>
+
 ## Install
 
 I loved Matt Pocock's [`/handoff`](https://github.com/mattpocock/skills) skill but kept wanting more — a zero-input `/resume` that just continues, and a `/pickup` that lets me browse past sessions. So I built on top of it.
