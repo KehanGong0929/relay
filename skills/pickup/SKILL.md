@@ -13,7 +13,7 @@ If no `handoff*.md` files are found in the temp directory, tell the user the tem
 **If an argument is given, interpret it as:**
 - a file path or filename → load that document directly;
 - a date like `2026-06-04` → filter to handoffs from that day;
-- otherwise a keyword → filter labels and filenames by it (case-insensitive).
+- otherwise a keyword or project name → filter labels (handoff titles) and filenames by it (case-insensitive).
 
 After filtering: if exactly one matches, load it; if several match, list them and ask the user to choose.
 

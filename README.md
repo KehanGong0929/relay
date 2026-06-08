@@ -12,7 +12,7 @@ npx skills add github.com/KehanGong0929/agent-context-relay -y -g
 
 `-y` = non-interactive, `-g` = global (available in every project). Drop `-g` to install for the current project only.
 
-The `skills` CLI installs to the compatible agents it finds on your machine — Claude Code, Cursor, Copilot, Codex, Gemini, and more — so a single command usually covers every agent you use, with no separate per-agent setup.
+The `skills` CLI installs to the compatible agents it detects on your machine — depending on your setup that may include Claude Code, Cursor, Copilot, Codex, Gemini, and others — so one command usually covers everything, with no per-agent setup.
 
 ## Commands
 
@@ -67,6 +67,8 @@ Both skills glob `handoff*.md` in your OS temp dir and identify the right projec
 - Works even if the file was renamed or written by a different agent
 - `/resume` picks the newest match for the current project automatically
 - `/pickup` lets you browse, filter by keyword, date, or path, and choose
+
+**Limitation:** matching is path-based. If you move or clone the same repo to a different location, `/resume` won't recognise older handoffs written under the old path — use `/pickup` to pick them manually.
 
 ## Credits / license
 
