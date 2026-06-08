@@ -1,4 +1,4 @@
-# relay — session handoff for AI coding agents
+# relay — session handoff for AI agents
 
 Keep your working context alive across `/clear` and session boundaries. Pick up exactly where you left off — in the same agent or a different one.
 
@@ -12,7 +12,7 @@ npx skills add github.com/KehanGong0929/relay -y -g
 
 `-y` = non-interactive, `-g` = global (available in every project). Drop `-g` to install for the current project only.
 
-This one command is enough for every agent — the `skills` CLI detects the compatible coding agents on your machine (Claude Code, Cursor, Copilot, Codex, Gemini, and more) and installs to all of them. There's no separate per-agent setup.
+This one command is enough for every agent — the `skills` CLI detects the compatible agents on your machine (Claude Code, Cursor, Copilot, Codex, Gemini, and more) and installs to all of them. There's no separate per-agent setup.
 
 ## Commands
 
@@ -28,7 +28,7 @@ This one command is enough for every agent — the `skills` CLI detects the comp
 # Session A — finish your work, then hand off
 /handoff finish the auth middleware
 
-# Manually start a fresh session (Claude Code built-in, not part of relay)
+# Manually start a fresh session (your agent's built-in, not part of relay)
 /clear            # or open a new window in the same folder
 
 # Session B — continue exactly where you left off
@@ -37,11 +37,11 @@ This one command is enough for every agent — the `skills` CLI detects the comp
 /pickup 2026-06-07
 ```
 
-## Designed for Claude Code, works across agents
+## Works across agents
 
-`relay` was built for **Claude Code** but handoff documents are plain markdown — no dependency on any specific agent's internals.
+`relay` started life on **Claude Code**, but handoff documents are plain markdown — no dependency on any specific agent's internals.
 
-A handoff written in Claude Code can be resumed in **Codex**, **Copilot CLI**, or any agent that can read files. Each skill is a plain-instruction `SKILL.md` that uses the host agent's own file tools — no code, no runtime, nothing to install besides the skills themselves.
+A handoff written in one agent can be resumed in another — **Codex**, **Copilot**, **Cursor**, **Gemini**, or anything that can read a file. Each skill is a plain-instruction `SKILL.md` that uses the host agent's own file tools — no code, no runtime, nothing to install besides the skills themselves.
 
 ```
 Claude Code  ──/handoff──▶  handoff.md  ──/resume──▶   Claude Code (new session)
