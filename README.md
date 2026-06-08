@@ -1,4 +1,4 @@
-# relay — context continuity for AI agents
+# agent-context-relay — context continuity for AI agents
 
 Keep your working context alive across `/clear` and session boundaries. Pick up exactly where you left off — in the same agent or a different one.
 
@@ -7,7 +7,7 @@ Keep your working context alive across `/clear` and session boundaries. Pick up 
 I loved Matt Pocock's [`/handoff`](https://github.com/mattpocock/skills) skill but kept wanting more — a zero-input `/resume` that just continues, and a `/pickup` that lets me browse past sessions. So I built on top of it.
 
 ```
-npx skills add github.com/KehanGong0929/relay -y -g
+npx skills add github.com/KehanGong0929/agent-context-relay -y -g
 ```
 
 `-y` = non-interactive, `-g` = global (available in every project). Drop `-g` to install for the current project only.
@@ -28,7 +28,7 @@ The `skills` CLI installs to the compatible agents it finds on your machine — 
 # Session A — finish your work, then hand off
 /handoff finish the auth middleware
 
-# Manually start a fresh session (your agent's built-in, not part of relay)
+# Manually start a fresh session (your agent's built-in, not part of agent-context-relay)
 /clear            # or open a new window in the same folder
 
 # Session B — continue exactly where you left off
@@ -39,7 +39,7 @@ The `skills` CLI installs to the compatible agents it finds on your machine — 
 
 ## Works across agents
 
-`relay` started life on **Claude Code**, but handoff documents are plain markdown — no dependency on any specific agent's internals.
+`agent-context-relay` started life on **Claude Code**, but handoff documents are plain markdown — no dependency on any specific agent's internals.
 
 A handoff written in one agent can be resumed in another — **Codex**, **Copilot**, **Cursor**, **Gemini**, or anything that can read a file. Each skill is a plain-instruction `SKILL.md` that uses the host agent's own file tools — no code, no runtime, nothing to install besides the skills themselves.
 
@@ -52,7 +52,7 @@ Claude Code  ──/handoff──▶  handoff.md  ──/resume──▶   Claud
 
 ### Triggering the commands in other agents
 
-The `/handoff` style used above is slash-command syntax. relay follows the open [Agent Skills](https://agentskills.io) standard, so most compatible agents — Codex, Copilot, Cursor, Gemini — also accept `/handoff`, `/resume`, and `/pickup` directly.
+The `/handoff` style used above is slash-command syntax. agent-context-relay follows the open [Agent Skills](https://agentskills.io) standard, so most compatible agents — Codex, Copilot, Cursor, Gemini — also accept `/handoff`, `/resume`, and `/pickup` directly.
 
 If an agent doesn't support slash commands, just ask in plain language — "hand off this session", "resume the latest handoff", "pick up the handoff from yesterday" — and it will match the skill by its description in the frontmatter.
 
